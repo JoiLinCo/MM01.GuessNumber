@@ -33,9 +33,11 @@ input {
 
 button {
     margin: 10px;
-    background-color: navy;
+    padding: 10px;
+    background-color: blue;
     color: white;
     border-radius: 5px;
+    width: 200px;
 }
 
 .feedback {

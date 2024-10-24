@@ -11,7 +11,7 @@ function submit() {
         guessFeedback = "Too high. Try again.";
     } else if (guessNumber === correctNumber) {
         guessFeedback = "Congratulations";
-    }
+    } 
 
     document.getElementById("feedback").innerHTML = guessFeedback;
 
