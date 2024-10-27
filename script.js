@@ -7,7 +7,7 @@ function submit() {
     let guessFeedback;
 
     if (guessNumber < correctNumber) {
-        guessFeedback = "Too low. Try again.";
+        guessFeedback = "Too low. Try again. Guesses remaining: " + guesses;
     } else if (guessNumber > correctNumber) {
         guessFeedback = "Too high. Try again.";
     } else if (guessNumber == correctNumber) {
