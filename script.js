@@ -35,6 +35,7 @@ function submit() {
         var element = document.getElementById("feedback");
         element.classList.remove("feedback");
         element.classList.add("correct");
+        guesses = 0;
         guessFeedback = "Congratulations! Refresh to play again.";
     } else if (guessNumber < correctNumber) {
         guessFeedback = "Too low. Try again. You have " + guesses + " guesses remaining.";
