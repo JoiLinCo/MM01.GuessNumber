@@ -1,5 +1,6 @@
-const correctNumber = (Math.floor(Math.random() * 99) + 2);
+let correctNumber = (Math.floor(Math.random() * 99) + 2);
 let guesses = 10;
+const button = document.getElementById("submit");
 
 function submit() {
 
@@ -17,15 +18,15 @@ function submit() {
         element.classList.add("correct");
         guessFeedback = "Congratulations!";
     } else if (guessNumber < correctNumber) {
-        guessFeedback = "Too low. Try again. Guesses remaining: " + guesses;
+        guessFeedback = "Too low. Try again. You have " + guesses + " guesses remaining.";
         guesses--;
-    } else if (guessNumber > correctNumber) {
-        guessFeedback = "Too high. Try again. Guesses remaining: " + guesses;
+    } else (guessNumber > correctNumber) {
+        guessFeedback = "Too high. Try again. You have " +guesses+ " guesses remaining.";
         guesses--;
-    } else {
-        guessFeedback = "Try again.";
     }
     
     document.getElementById("feedback").innerHTML = guessFeedback;
 
 }
+
+
