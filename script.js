@@ -1,6 +1,25 @@
 let correctNumber = (Math.floor(Math.random() * 99) + 2);
 let guesses = 10;
-const button = document.getElementById("submit");
+
+/*const button = document.getElementById("submit");
+let isGameOver = false;
+
+function newButtonAndFunction() {
+    if (button.textContent === "Submit Guess") {
+        button.textContent = "Play again";
+        button.onclick = newGame();
+    } else {
+        button.textContent = "Submit Guess";
+        button.onclick = submit()
+    }
+}
+
+function newGame() {
+    correctNumber = (Math.floor(Math.random() * 99) + 2);
+    guesses = 10;
+    newButtonAndFunction();
+}
+*/
 
 function submit() {
 
@@ -20,9 +39,11 @@ function submit() {
     } else if (guessNumber < correctNumber) {
         guessFeedback = "Too low. Try again. You have " + guesses + " guesses remaining.";
         guesses--;
-    } else (guessNumber > correctNumber) {
+    } else if (guessNumber > correctNumber) {
         guessFeedback = "Too high. Try again. You have " +guesses+ " guesses remaining.";
         guesses--;
+    } else {
+        guessFeedback = "Try again.";
     }
     
     document.getElementById("feedback").innerHTML = guessFeedback;
