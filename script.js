@@ -28,14 +28,14 @@ function submit() {
     let guessCount = guesses;
 
     if (guessCount === 0) {
-        guessFeedback = "You are out of guesses. Would you like to play again?";
+        guessFeedback = "You are out of guesses. Refresh to play again.";
     } else if (guessNumber === "") {
         guessFeedback = "Please enter an integer.";
     } else if (guessNumber == correctNumber) {
         var element = document.getElementById("feedback");
         element.classList.remove("feedback");
         element.classList.add("correct");
-        guessFeedback = "Congratulations!";
+        guessFeedback = "Congratulations! Refresh to play again.";
     } else if (guessNumber < correctNumber) {
         guessFeedback = "Too low. Try again. You have " + guesses + " guesses remaining.";
         guesses--;
